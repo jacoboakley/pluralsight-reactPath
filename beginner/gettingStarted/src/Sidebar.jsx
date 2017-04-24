@@ -1,22 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react'
 
-
-const Sidebar = (props) => {
-  return (
-    <div style={{
-      width: '33vw',
-      height: '100vh',
-      overflow: 'auto',
-      background: '#eee',
+const Sidebar = (props) => (
+  <div style={{
       alignItems: 'center',
+      background: '#eee',
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'center'
-    }}>
-      <a href='#'>Counter</a>
-      <a href='#'>GithubLookup</a>
-    </div>
-  )
-}
+      height: '100vh',
+      justifyContent: 'center',
+      overflow: 'auto',
+      width: '20vw'
+      
+  }} {...props} />
+);
 
 export default Sidebar;
