@@ -1,21 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-class Header extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-      </div>
-    );
-  }
+
+/*
+
+componentDidMount() {
+  fetch('URL')
+    .then(res => res.json())
+    .then(user => {
+      this.setState({ user })
+    })
 }
 
-// My Content
+*/
+
 
 const Card = (props) => {
   return (
@@ -57,7 +54,7 @@ class Form extends React.Component {
   }
 }
 
-class GithubApp extends React.Component {
+class GithubLookup extends React.Component {
   state = {
     cards: [
       { name: "Paul O'Shannessy",
@@ -70,15 +67,12 @@ class GithubApp extends React.Component {
   }
   render() {
     return (
-      <div>
-        <Header />
-        <div className="content">
-          <Form />
-          <CardList cards={this.state.cards} />
-        </div>
+      <div className="content">
+        <Form />
+        <CardList cards={this.state.cards} />
       </div>
     );
   }
 }
 
-export default GithubApp;
+export default GithubLookup;
